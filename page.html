@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/hidden_column.css">
+    <link rel="stylesheet" href="styles/main_style.css">
+    <link rel="stylesheet" href="styles/points_box.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="column column1">
+            <div class="toggle-text"></div>
+            <h1><a href="https://javascript.info/bezier-curve" target="_blank" rel="noopener">Bezier Curve</a></h1>
+            <p>
+                To delete a point: <b>double click on it</b><br>
+                To create a point: <b>double click anywhere except on existing points</b><br>
+                To change the position of a point: <b>click on the point and drag it somewhere</b>
+            </p>    
+            <div id="container"></div>         
+        </div>
+        <div class="column column2">
+          <canvas id="myCanvas"></canvas>
+        </div>
+    </div>  
+    <script src="functions/multigroup_of_bezier_curve.js"></script>
+    <script src="functions/hidden_column.js"></script>
+</body>
+</html>
