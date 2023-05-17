@@ -10,7 +10,8 @@ for (let j = 0; j < points_groups.length; j++) {
     const button1 = document.createElement("div");
     button1.className = "circle-button";
     button1.id = `${j}-button-1`;
-  
+    button1.appendChild(document.createTextNode("~"));
+    
     const button2 = document.createElement("div");
     button2.className = "circle-button";
     button2.id = `${j}-button-2`;

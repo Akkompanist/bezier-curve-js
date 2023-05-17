@@ -18,6 +18,7 @@
         border: 1px solid #ccc;
         border-radius: 5px;
         padding: 10px;
+        font-size: 50px;
       }
 
       /* Style for the group number span */
@@ -35,14 +36,9 @@
       }
 
       /* Style for the circle button */
-      .circle-button {
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        margin-right: 10px;
-        color: aqua;
-        background-color: aquamarine;
-      }
+      
+
+
 
       /* Style for the first circle button */
       #button-1 {
@@ -58,6 +54,53 @@
       .points-count {
         margin-left: 10px;
       }
+
+      .main-wrapper {
+        display: inline-flex;
+        align-items: center;
+        margin-right: 10px;
+        font-size: 50px;
+      }
+
+      .group-number {
+        font-size: 24px;
+        margin-right: 10px;
+      }
+
+      .main-div {
+        width: 150px;
+        height: 60px;
+        border: 1px solid black;
+        color:black;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+
+      .middle-div {
+        display: flex;
+        align-items: center;
+      }
+
+      .circle-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #fff;
+        margin: 5px;
+        line-height: 50px;
+        text-align: center;
+        font-size: 50px;
+      }
+
+      .points-count {
+        margin-left: 10px;
+        font-size: 24px;
+}
+
     </style>
   </head>
   <body>
@@ -66,46 +109,54 @@
     <script>
       // JS code for creating the divs
       const container = document.getElementById("container");
-      const points_groups = [[{x: 10, y: 20}, {x: 30, y: 40}], [{x: 50, y: 60}, {x: 70, y: 80}, {x: 90, y: 100}]];
+      const points_groups = [[{x: 10, y: 20}, {x: 30, y: 40}, {}], [{x: 50, y: 60}, {x: 70, y: 80}, {x: 90, y: 100}]];
 
       for (let j = 0; j < points_groups.length; j++) {
-        const mainDiv = document.createElement("div");
-        mainDiv.className = `main-div`;
-        mainDiv.id = `${j}-main-div`;
-        // add click event listener to mainDiv
-        mainDiv.addEventListener("click", function() {
-            const randomColor = Math.floor(Math.random()*16777215).toString(16);
-            this.style.backgroundColor = "#" + randomColor;
-        });
+        const mainWrapper = document.createElement("div");
+        mainWrapper.className = "main-wrapper";
 
         const groups_num = document.createElement("span");
         groups_num.className = "group-number";
-        groups_num.textContent = `${j+1}`;
+        groups_num.textContent = `${j + 1}.`;
+
+        const mainDiv = document.createElement("div");
+        mainDiv.className = "main-div";
+        mainDiv.id = `${j}-main-div`;
+        // add click event listener to mainDiv
+        mainDiv.addEventListener("click", function () {
+          const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+          this.style.backgroundColor = "#" + randomColor;
+        });
 
         const middleDiv1 = document.createElement("div");
         middleDiv1.className = "middle-div";
-      
+
         const button1 = document.createElement("div");
         button1.className = "circle-button";
         button1.id = `${j}g-button-1`;
-      
+        button1.appendChild(document.createTextNode("\u268A"));
+
         const button2 = document.createElement("div");
         button2.className = "circle-button";
         button2.id = `${j}g-button-2`;
-      
+        button2.appendChild(document.createTextNode("\u26AC"));
+
         const pointsLengthSpan = document.createElement("span");
         pointsLengthSpan.className = "points-count";
         pointsLengthSpan.textContent = points_groups[j].length;
-      
+
         middleDiv1.appendChild(button1);
         middleDiv1.appendChild(button2);
         middleDiv1.appendChild(pointsLengthSpan);
 
-        mainDiv.appendChild(groups_num);
         mainDiv.appendChild(middleDiv1);
-      
-        container.appendChild(mainDiv);
+
+        mainWrapper.appendChild(groups_num);
+        mainWrapper.appendChild(mainDiv);
+
+        container.appendChild(mainWrapper);
       }
+
     </script>
   </body>
 </html>

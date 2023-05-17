@@ -21,7 +21,39 @@ canvas.style.backgroundColor = "#222"; // DeepSkyBlue
 // Fill the container with boxes for points groups. Settins for each group to add points and delete points, change colors
 const container = document.getElementById("container");
 
- 
+for (let j = 0; j < points_groups.length; j++) {
+    const mainDiv = document.createElement("div");
+    mainDiv.className = `${j}-main-div`;
+
+    const groups_num = document.createElement("span");
+    groups_num.id = `${j}-points-group`;
+    groups_num.textContent = `Gruops: ${j+1}`;
+
+    const middleDiv1 = document.createElement("div");
+    middleDiv1.className = "middle-div";
+  
+    const button1 = document.createElement("div");
+    button1.className = "circle-button";
+    button1.id = `${j}g-button-1`;
+  
+    const button2 = document.createElement("div");
+    button2.className = "circle-button";
+    button2.id = `${j}g-button-2`;
+  
+    const pointsLengthSpan = document.createElement("span");
+    pointsLengthSpan.id = `${j}g-points-length`;
+    pointsLengthSpan.textContent = points_groups[j].length;
+  
+    middleDiv1.appendChild(button1);
+    middleDiv1.appendChild(button2);
+    middleDiv1.appendChild(pointsLengthSpan);
+
+    mainDiv.appendChild(groups_num);
+    mainDiv.appendChild(middleDiv1);
+  
+    container.appendChild(mainDiv);
+}
+  
   
 // Set the canvas dimensions to the window dimensions
 function setCanvasDimensions() {
