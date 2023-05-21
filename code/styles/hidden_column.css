@@ -1,0 +1,41 @@
+.wrapper {
+    display: flex;
+    position: relative;
+}
+
+.column {
+    flex: 1;
+    padding: 20px;
+    max-height: 95%;
+}
+
+.column1 {
+    left: 0;
+    position: absolute;
+    background-color: #666;
+    width: 20%;
+    transition: left 1s ease-in-out;
+    z-index: 2;
+}
+
+.column2 {
+    position: relative;
+    z-index: 1;
+}
+
+.column1.hidden {
+    left: -20%;
+    overflow: hidden;
+}
+
+
+.toggle-text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #666;
+    color: #fff;
+    font-size: 50px;
+}

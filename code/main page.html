@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bezier Curve</title>
+    <link rel="stylesheet" href="styles/hidden_column.css">
+    <link rel="stylesheet" href="styles/main_style.css">
+    <link rel="stylesheet" href="styles/points_box.css">
+    <link rel="stylesheet" href="styles/object_box.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="column column1">
+            <div class="toggle-text"></div>
+            <header>
+                <h1><a href="https://javascript.info/bezier-curve" target="_blank" rel="noopener">Bezier Curve</a></h1>
+                <div class="instructions-block">
+                    <h1> Instructions </h1>
+                    <div class="instruction">
+                        <h3>Deleting Existing Points:</h3>
+                        <p>To remove a point, simply double-click on it.</p>
+                    </div>
+
+                    <div class="instruction">
+                        <h3>Hiding/Showing Points and Curves:</h3>
+                        <ul>
+                            <li> To hide/show all points, press Shift + H + P. </li>
+                            <li> For hiding/showing curves, press Shift + H + C.</li>
+                        </ul>
+                    </div>
+
+                    <div class="instruction">
+                        <h3>Adding Points:</h3>
+                        <p>
+                        <ol>
+                            <li> Select a group by clicking on it. </li>
+                            <li> To add a new point, double-click on an empty area of the canvas while the group is
+                                selected.</li>
+                            </uol>
+                            </p>
+                    </div>
+
+                    <div class="instruction">
+                        <h3>Moving Points:</h3>
+                        <p>
+                            Click and hold the mouse button on a point, then drag the mouse to relocate the point.
+                        </p>
+                    </div>
+
+                    <div class="instruction">
+                        <h3>Toggling Hidden Column:</h3>
+                        <p>
+                            Hold the Ctrl key to toggle the visibility of the hidden column.
+                            <p class="postscript">
+                              <strong>P.S.</strong> Note that this feature may have some issues for which we apologize for any inconvenience caused.
+                            </p>
+                          </p>                                                  
+
+                    </div>
+
+                    <div class="instruction">
+                        <h3>Group Operations:</h3>
+                        <p>
+                            <strong>Creating a New Group:</strong> Click on the [+] button located below the existing
+                            groups to create a new group.<br>
+                            <strong>Deleting a Group:</strong> To delete a group, click on the [-] button positioned on
+                            the right side of the group block.<br>
+                            <strong>Selecting All Groups:</strong> Press Shift + A to select all groups.<br>
+                            <strong>Deselecting All Groups:</strong> Press Shift + A + C to deselect all groups.
+                        </p>
+                    </div>
+
+                    <div class="instruction">
+                        <h3>Changing Color:</h3>
+                        <p>
+                            <strong>To modify the color of a curve or points within a group:</strong>
+                        </p>
+                        <ul>
+                            <li> Select the desired group.</li>
+                            <li> Utilize the color button provided in the group block to change the color.</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </header>
+            <div id="container">
+                <div id="objects_vault"></div>
+            </div>
+        </div>
+        <div class="column column2">
+            <canvas id="myCanvas"></canvas>
+        </div>
+    </div>
+    <script src="functions/multigroup_of_bezier_curve.js"></script>
+    <script src="functions/hidden_column.js"></script>
+    <script src="functions/objecet_box.js"></script>
+</body>
+
+</html>
