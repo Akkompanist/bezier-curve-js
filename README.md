@@ -6,7 +6,7 @@ This is my first JavaScript project where I aimed to create beautiful art using 
 
 The idea behind this project was to explore the artistic possibilities of bezier curves. By manipulating control points and curves, I wanted to create visually appealing and unique art pieces. The program allows users to interactively create, modify, and delete points, resulting in stunning artwork like the image below:
 
-![Some art using the program](image/someartwithbezier.png)
+![Some art using the program](code/image/someartwithbezier.png)
 
 # Instructions
 
