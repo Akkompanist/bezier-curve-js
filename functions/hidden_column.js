@@ -26,7 +26,7 @@ column1.style.height = window.innerHeight + "px";
 column2.style.height = window.innerHeight + "px";
 
 // Show or hide the column when is hovered
-column1.addEventListener("mouseenter", toggleColumn) 
-column1.addEventListener("mouseleave", toggleColumn) 
+setTimeout(column1.addEventListener("mouseenter", toggleColumn), 2000); 
+setTimeout(column1.addEventListener("mouseleave", toggleColumn), 2000); 
 // Update the height of the columns when the window is resized
 window.addEventListener("resize", resize);

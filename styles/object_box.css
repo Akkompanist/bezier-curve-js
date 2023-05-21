@@ -1,0 +1,83 @@
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+.curves_box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+}
+
+.curves_object {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #222;
+  color: #fff;
+  padding: 10px;
+  margin: 10px;
+  width: 150px;
+}
+
+.remove_button {
+  background-color: #222;
+  align-items: center;
+  color: #fff;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 20%;
+  font: bold 20px Arial, sans-serif;
+  cursor: pointer;
+}
+.add_button{
+  background-color: #222;
+  align-items: center;
+  color: #fff;
+  padding: 5px;
+  width: 200px;
+  height: 30px;
+  border: #222;
+  font: bold 20px Arial, sans-serif;
+  cursor: pointer;
+  margin-left: 10px;
+  bottom: 0;
+}
+.curves_object_num {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.curves_object_control {
+  display: flex;
+  align-items: center;
+  left: 60px;
+}
+
+input[type="color"] {
+  appearance: none;
+  border: none;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: transparent;
+  margin-right: 10px;
+}
+
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+  background-color: #222;
+}
+
+.curves_object_points_counter {
+  background-color: #fff;
+  color: #222;
+  padding: 5px;
+}
